@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package bug668;
+
+// protoc block.proto --go_out=plugins=grpc:..
+
+
+import "google/protobuf/timestamp.proto";
+
+message Block {
+    string blockId = 1;
+    google.protobuf.Timestamp timestamp = 2;
+}
